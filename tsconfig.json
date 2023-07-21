@@ -2,7 +2,10 @@
   "compilerOptions": {
     "strict": true,
     "outDir": "./dist/",
-    "lib": ["ESNext", "DOM"],
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
     "target": "ES6",
     "module": "commonjs",
     "moduleResolution": "node",
@@ -13,7 +16,10 @@
     "declarationDir": "./dist/types",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noImplicitReturns": true
+    "noImplicitReturns": true,
+    "experimentalDecorators": true
   },
-  "include": ["src"]
+  "include": [
+    "src"
+  ]
 }

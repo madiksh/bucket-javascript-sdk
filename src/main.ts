@@ -32,6 +32,10 @@ export default function main() {
 
   log("Instance created");
 
+  const feedbackDialog = document.createElement("bucket-feedback-dialog");
+  document.body.appendChild(feedbackDialog);
+  log("Attached feedback dialog");
+
   function getUrl() {
     return `${trackingHost}/${trackingKey}`;
   }
@@ -185,6 +189,14 @@ export default function main() {
     sessionUserId = undefined;
   }
 
+  function openFeedbackDialog(
+    featureId: string,
+    userId: string,
+    { modal = false }
+  ) {
+    feedbackDialog.open(modal);
+  }
+
   return {
     // lifecycle
     init,
@@ -194,5 +206,6 @@ export default function main() {
     company,
     track,
     feedback,
+    openFeedbackDialog,
   };
 }
